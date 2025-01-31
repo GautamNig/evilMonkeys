@@ -9,8 +9,6 @@ using namespace std;
 
 bool Game::run(void)
 {
-	level = new Level(&drawArea, 30, 20);
-
 	drawArea.createSprite(0, '$');
 	//player = new Sprite(&drawArea, 0);
 	player = new Character(&drawArea, 0);

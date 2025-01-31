@@ -1,30 +1,28 @@
-#include "drawEngine.h"
-#include "sprite.h"
-#include "character.h"
 #ifndef GAME_H
 #define GAME_H
 
+#include "drawEngine.h"
+#include "character.h"
+#include "level.h"
+#include "mage.h"
+
 class Game
 {
-public:
+public :
 	bool run(void);
 
-
 protected:
-	bool getInput(char* c);
+	bool getInput(char *c);
 	void timerUpdate(void);
 
 private:
-	double frameCount;
+	Level *level;
+	Mage *player;
+	float frameCount;
 	double startTime;
 	double lastTime;
 
-	int posx;
-
 	DrawEngine drawArea;
-	//Sprite* player;
-	Character* player;
 };
-
 
 #endif
